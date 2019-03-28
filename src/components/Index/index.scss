@@ -1,0 +1,72 @@
+@mixin external_based($back, $padding) {
+    background-color: $back;
+    padding: $padding;
+    position: relative;
+}
+
+@mixin font($size, $weight, $let, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $let;
+    color: $color;
+}
+
+.about-us {
+    @include external_based(#f9f9f9, 120px 0);
+
+    .about-us-img {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .about-us-content {
+        h4 {
+            @include font(17px, 600, 1px, #e26d2f);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            margin-top: -5px;
+        }
+
+        h2 {
+            @include font(36px, 700, 1px, #0e2048);
+            margin-bottom: 22px;
+            margin-top: -5px;
+            line-height: 1.2;
+
+            span {
+                color: #e26d2f;
+            }
+        }
+
+        p {
+            @include font(14px, 500, 0.5px, #333);
+            font-family: "Poppins", sans-serif;
+            line-height: 25px;
+            margin-bottom: 13px;
+        }
+
+        .abous-us-more {
+            @include font(16px, 500, 0.5px, #e26d2f);
+            margin-top: 30px;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .abous-us-more:hover {
+            text-decoration: none;
+            color: #333;
+        }
+    }
+}
+.provide{
+    @include external_based(#fff, 120px 0);
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}

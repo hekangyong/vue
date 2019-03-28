@@ -1,0 +1,124 @@
+$topNavcolor: #ffff;
+$aColor: #29326f;
+$aSize: 18px;
+
+@mixin transition($s) {
+    transition: all $s;
+}
+
+@mixin p-l($px) {
+    padding-left: $px
+}
+
+@mixin backgroundColor($back) {
+    background-color: $back
+}
+
+@mixin padding($tb, $rl) {
+    padding: $tb $rl;
+}
+
+.topNavbar {
+    background-color: $topNavcolor;
+    padding: 20px 0 !important;
+    position: fixed;
+    top: 0px;
+    z-index: 11000;
+    width: 100%;
+
+    .navbar {
+        padding: 0
+    }
+
+    .logo-img {
+        max-width: 170px;
+        max-height: 50px;
+        display: block
+    }
+
+    .top-Nav-p {
+        @include p-l(75px);
+        position: relative;
+
+        .small-tab {
+            position: absolute;
+            top: 80px;
+            background-color: #171a21;
+            width: 222px;
+            @include backgroundColor(#171a21);
+            @include p-l(0px);
+            border-top: 2px solid #4272d7;
+            transition: all 0.3s;
+            opacity: 0;
+
+            li {
+                list-style: none;
+                @include padding(15px, 20px);
+                border-bottom: 2px solid #1e2128;
+                transition: all 0.3s;
+
+                .small-nav-link {
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: .5px;
+                    color: #fff;
+                    transition: all 0.3s;
+                }
+            }
+
+            li:hover {
+                background-color: #f84825;
+                padding-left: 30px;
+            }
+            li:hover a{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .input-style {
+        border: 3px solid transparent;
+        @include transition(0.4s);
+        border-radius: 20px;
+    }
+
+    .input-style:hover {
+        border: 3px solid $aColor;
+    }
+
+    .input-style:focus {
+        border: 3px solid $aColor;
+        box-shadow: none !important;
+    }
+
+    .collapse {
+        .nav-link {
+            color: $aColor !important;
+            font-size: $aSize;
+            font-weight: bold;
+            margin-right: 28px;
+            padding: 10px 0;
+            cursor: pointer;
+            @include transition(0.3s);
+        }
+
+        .nav-link:hover {
+            color: #f94825 !important;
+        }
+
+        .form-pre {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 7px;
+                right: 22px;
+            }
+        }
+
+        .nav-item:hover .small-tab {
+            opacity: 1;
+            top: 74px;
+        }
+    }
+}
