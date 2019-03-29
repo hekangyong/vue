@@ -30,7 +30,7 @@
     </div>
     <div class="provide">
       <div class="container">
-        <div class="row"></div>
+        <div class="row">asd</div>
       </div>
     </div>
   </div>
