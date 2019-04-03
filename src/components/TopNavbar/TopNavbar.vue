@@ -19,7 +19,7 @@
 
         <div class="collapse navbar-collapse top-Nav-p" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item" v-for="(tab,index) in items" :key="index">
+            <li class="nav-item" v-for="tab in items" :key="tab.id">
               <!-- v-on:mouseover="tabshow(tab.text)"
               v-on:mouseout="out(tab.text)"-->
               <a class="nav-link" @click="toPage(tab.text)">{{ tab.text }}</a>
