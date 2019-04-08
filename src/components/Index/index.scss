@@ -168,6 +168,27 @@ body {
 
 }
 
+.video-area{
+    background-image: url("../../assets/images/bg-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 120px 0;
+    z-index: 1;
+}
+
+.video-area::before{
+    content: "";
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    z-index: -1;
+}
+
 .provide-card:hover img {
     transform: scale(1.2) rotate(-3deg);
 }
@@ -188,6 +209,9 @@ body {
 /* .fade-leave-active below version 2.1.8 */
     {
     opacity: 0;
+}
+.zindex{
+    z-index: 1;
 }
 
 @media (min-width: 1200px) {
