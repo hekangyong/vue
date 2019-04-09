@@ -70,13 +70,28 @@
                 <div class="row align-items-center">
                     <!-- <p style="color: #fff">sdf</p> -->
                     <div class="col-md-7">
-                        asd
+                        <div class="video-box-content">
+                            <div class="videp-content-title">
+                                <h2>Why <span>Choose</span> Us?</h2>
+                            </div>
+                            <div class="video-box-sub">
+
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-5">
-                        <div class="video-area-content">
-                            <a href="#">
-                                <img src="../../assets/images/video.png" alt="asd" class="img-fluid">
-                            </a>
+                        <div class="video-area-content position-relative text-right">
+                            <div class="video-btn">
+                                <a href="#">
+                                    <img src="../../assets/images/video.png" alt="asd" class="img-fluid">
+                                </a>
+                                <div class="video-animation">
+                                    <div class="animation animation-1"></div>
+                                    <div class="animation animation-2"></div>
+                                    <div class="animation animation-3"></div>
+                                    <div class="animation animation-4"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,12 +144,20 @@
 						content:
 							"There are many variations desktop repair of Lorem electronics repair, but the majority have suffered alteration in"
 					}
-				]
+				],
+                // choose:[
+                //     {
+                //     	icon: "",
+                //         title: "",
+                //         content: "",
+                //     }
+                // ],
 			};
 		},
 		components: {
 			Carousel
 		},
+		mounted: {},
 		methods: {}
 	};
 </script>
