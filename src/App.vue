@@ -9,15 +9,14 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import TopNavbar from "./components/TopNavbar/TopNavbar";
-import Index from "./components/Index/Index";
+// import Index from "./components/Index/Index";
 
 
 export default {
   name: "app",
   components: {
-    // HelloWorld
     TopNavbar,
-    Index
+    // Index
   }
 };
 </script>

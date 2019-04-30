@@ -74,8 +74,16 @@
                             <div class="videp-content-title">
                                 <h2>Why <span>Choose</span> Us?</h2>
                             </div>
-                            <div class="video-box-sub">
-
+                            <div class="video-box-sub" v-for="chooses in choose" :key="chooses.index">
+                                <div class="video-choose">
+                                    <img :src=chooses.img alt="">
+                                </div>
+                                <div class="video-choose-content">
+                                    <h3>{{ chooses.title }}</h3>
+                                    <p>
+                                        {{ chooses.content }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -97,6 +105,7 @@
                 </div>
             </div>
         </div>
+        <button @click="show">asd</button>
     </div>
 </template>
 
@@ -145,20 +154,36 @@
 							"There are many variations desktop repair of Lorem electronics repair, but the majority have suffered alteration in"
 					}
 				],
-                // choose:[
-                //     {
-                //     	icon: "",
-                //         title: "",
-                //         content: "",
-                //     }
-                // ],
+                choose:[
+					{
+						img: require("../../assets/images/kunnan-.svg"),
+						title: "Laptop Repair",
+						content:
+							"There are many variations of Laptop repair Lorem electronics repair, but the majority have suffered alteration in"
+					},
+					{
+						img: require("../../assets/images/anchor.svg"),
+						title: "Low Price",
+						content:
+							"There are many variations of Laptop repair Lorem electronics repair, but the majority have suffered alteration in"
+					},
+					{
+						img: require("../../assets/images/clock.svg"),
+						title: "Quick Service",
+						content:
+							"There are many variations of Laptop repair Lorem electronics repair, but the majority have suffered alteration in"
+					},
+                ],
 			};
 		},
 		components: {
 			Carousel
 		},
-		mounted: {},
-		methods: {}
+		methods: {
+			show: function(){
+				console.log(this.items)
+            }
+        }
 	};
 </script>
 

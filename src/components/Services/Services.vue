@@ -5,13 +5,13 @@
 </template>
 
 <style lang="scss" scoped>
-.services{
-    margin-top: 100px;
-}
+    .services {
+        margin-top: 100px;
+    }
 </style>
 
 <script>
-export default {
-    name: "Services"
-}
+	export default {
+		name: "Services"
+	}
 </script>
